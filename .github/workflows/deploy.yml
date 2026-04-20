@@ -14,6 +14,16 @@ jobs:
       - name: Checkout Code
         uses: actions/checkout@v4
 
+      # --- THE FIX: Install Python and uv ---
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.10'
+          
+      - name: Install uv
+        run: pip install uv
+      # --------------------------------------
+
       - name: Setup Databricks CLI
         uses: databricks/setup-cli@main
 
