@@ -1,20 +1,21 @@
-# sales_data
+# New Pipeline 2026-04-16 11:02
 
-This folder defines all source code for the sales_data pipeline:
+This folder defines all source code for the 'New Pipeline 2026-04-16 11:02' pipeline:
 
-- `explorations/`: Ad-hoc notebooks used to explore the data processed by this pipeline.
-- `transformations/`: All dataset definitions and transformations.
-- `utilities/` (optional): Utility functions and Python modules used in this pipeline.
-- `data_sources/` (optional): View definitions describing the source data for this pipeline.
+- `explorations`: Ad-hoc notebooks used to explore the data processed by this pipeline.
+- `transformations`: All dataset definitions and transformations.
+- `utilities`: Utility functions and Python modules used in this pipeline.
 
 ## Getting Started
 
 To get started, go to the `transformations` folder -- most of the relevant source code lives there:
 
 * By convention, every dataset under `transformations` is in a separate file.
-* Take a look at the sample called "sample_trips_sales_data.py" to get familiar with the syntax.
-  Read more about the syntax at https://docs.databricks.com/dlt/python-ref.html.
-* If you're using the workspace UI, use `Run file` to run and preview a single transformation.
-* If you're using the CLI, use `databricks bundle run sales_data_etl --select sample_trips_sales_data` to run a single transformation.
+* Take a look at the sample under "sample_users_apr_16_1102.py" to get familiar with the syntax.
+  Read more about the syntax at https://docs.databricks.com/ldp/developer/python-ref.
+* Use `Run file` to run and preview a single transformation.
+* Use `Run pipeline` to run _all_ transformations in the entire pipeline.
+* Use `+ Add` in the file browser to add a new data set definition.
+* Use `Schedule` to run the pipeline on a schedule!
 
-For more tutorials and reference material, see https://docs.databricks.com/dlt.
+For more tutorials and reference material, see https://docs.databricks.com/ldp.
