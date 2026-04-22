@@ -33,4 +33,5 @@ jobs:
           DATABRICKS_TOKEN: ${{ secrets.DATABRICKS_TOKEN }}
           DATABRICKS_BUNDLE_ENGINE: direct
         run: |
+          databricks bundle validate
           databricks bundle deploy --target dev
