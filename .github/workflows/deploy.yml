@@ -1,14 +1,18 @@
-name: Deploy Databricks Bundle to Dev
+name: CD - Deploy Databricks Bundle
 
 on:
-  push:
+  workflow_run:
+    workflows: ["Pytest - DLT & PySpark Tests"]
     branches:
       - main
+    types:
+      - completed
 
 jobs:
   deploy:
-    name: "Deploy Bundle"
+    name: "Deploy Bundle to Dev"
     runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
 
     steps:
       - name: Checkout Code
