@@ -39,12 +39,12 @@ jobs:
           ${{ runner.os }}-pip-
 
     - name: Install dependencies with uv
+      continue-on-error: true
       run: |
         source $HOME/.cargo/env
         uv pip install -e ".[dev]"
         # Install additional test dependencies for local Spark testing
         uv pip install pyspark pytest-cov
-      continue-on-error: true
 
     - name: Fallback: Install with pip
       if: failure()
