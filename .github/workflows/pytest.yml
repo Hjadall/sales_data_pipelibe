@@ -41,9 +41,8 @@ jobs:
     - name: Install dependencies with uv
       continue-on-error: true
       run: |
-        source $HOME/.cargo/env
+        export PATH="$HOME/.cargo/bin:$PATH"
         uv pip install -e ".[dev]"
-        # Install additional test dependencies for local Spark testing
         uv pip install pyspark pytest-cov
 
     - name: Fallback: Install with pip
