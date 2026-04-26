@@ -31,7 +31,7 @@ jobs:
       run: curl -LsSf https://astral.sh/uv/install.sh | sh
 
     - name: Cache pip packages
-      uses: actions/cache@v3
+      uses: actions/cache@v4
       with:
         path: ~/.cache/pip
         key: ${{ runner.os }}-pip-${{ hashFiles('**/pyproject.toml') }}
@@ -44,13 +44,14 @@ jobs:
         uv pip install -e ".[dev]"
         uv pip install pyspark pytest-cov
 
+
     - name: Run pytest with coverage
       env:
         SPARK_LOCAL_IP: 127.0.0.1
       run: pytest tests/ -v --cov=src/sales_data_etl --cov-report=xml --cov-report=term-missing
 
     - name: Upload coverage to Codecov
-      uses: codecov/codecov-action@v3
+      uses: codecov/codecov-action@v4
       with:
         file: ./coverage.xml
         flags: unittests
@@ -59,7 +60,7 @@ jobs:
 
     - name: Archive test results
       if: always()
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: pytest-results-py${{ matrix.python-version }}
         path: |
