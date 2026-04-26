@@ -39,7 +39,6 @@ jobs:
           ${{ runner.os }}-pip-
 
     - name: Install dependencies with uv
-      continue-on-error: true
       run: |
         export PATH="$HOME/.cargo/bin:$PATH"
         uv pip install -e ".[dev]"
