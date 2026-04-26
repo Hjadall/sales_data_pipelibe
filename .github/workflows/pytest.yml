@@ -44,12 +44,6 @@ jobs:
         uv pip install -e ".[dev]"
         uv pip install pyspark pytest-cov
 
-    - name: Fallback: Install with pip
-      if: failure()
-      run: |
-        pip install -e ".[dev]"
-        pip install pyspark pytest-cov
-
     - name: Run pytest with coverage
       env:
         SPARK_LOCAL_IP: 127.0.0.1
