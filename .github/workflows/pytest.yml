@@ -24,8 +24,8 @@ jobs:
     - name: Install system dependencies
       run: |
         sudo apt-get update
-        sudo apt-get install -y openjdk-11-jdk
-        echo "JAVA_HOME=/usr/lib/jvm/java-11-openjdk-amd64" >> $GITHUB_ENV
+        sudo apt-get install -y openjdk-17-jdk
+        echo "JAVA_HOME=/usr/lib/jvm/java-17-openjdk-amd64" >> $GITHUB_ENV
 
     - name: Install uv package manager
       run: curl -LsSf https://astral.sh/uv/install.sh | sh
