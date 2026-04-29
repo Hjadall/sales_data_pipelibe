@@ -8,6 +8,8 @@ A modern, scalable ETL pipeline built on Databricks using the **Medallion Archit
 - **Bronze Layer**: Raw data ingestion and schema validation
 - **Silver Layer**: Data cleaning, standardization, and enrichment
 - **Gold Layer**: Business-ready fact and dimension tables
+<img width="512" height="352" alt="workflow" src="https://github.com/user-attachments/assets/6d003477-22ac-42c0-a16e-e230497ea60e" />
+
 
 ### Project Structure
 ```
