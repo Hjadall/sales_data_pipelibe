@@ -9,6 +9,10 @@ A modern, scalable ETL pipeline built on Databricks using the **Medallion Archit
 - **Silver Layer**: Data cleaning, standardization, and enrichment
 - **Gold Layer**: Business-ready fact and dimension tables
 
+<img width="8191" height="3165" alt="Databricks CICD Deployment-2026-04-29-174016" src="https://github.com/user-attachments/assets/37e05f51-267c-4daa-bbd4-fb179ef68b61" />
+
+
+
 ### Project Structure
 ```
 sales_data/
