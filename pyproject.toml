@@ -11,14 +11,14 @@ dependencies = [
     # add dependencies to the 'environment' section of your pipeline.yml file instead
 ]
 
-[dependency-groups]
+[project.optional-dependencies]
 dev = [
     "pytest>=7.4.0",
     "pytest-cov>=4.1.0",
     "ruff",
     "databricks-dlt",
     "databricks-connect>=15.4,<15.5",
-    "pyspark>=3.4.0",
+    "pyspark>=3.4.0,<3.6.0",
     "ipykernel",
 ]
 
@@ -33,4 +33,4 @@ build-backend = "hatchling.build"
 packages = ["src/sales_data_etl"]
 
 [tool.ruff]
-line-length = 120
+line-length = 120git
