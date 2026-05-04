@@ -10,4 +10,4 @@ scratch/**
 **/!explorations/README.md
 databricks_connect_env/*
 dbcenv/*
-src/sales_data_etl/sample_notebook.ipynb
+/home/crazyfly/DAB's/sales_data/src/sample_notebook.ipynb
