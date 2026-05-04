@@ -33,4 +33,4 @@ build-backend = "hatchling.build"
 packages = ["src/sales_data_etl"]
 
 [tool.ruff]
-line-length = 120git
+line-length = 120
